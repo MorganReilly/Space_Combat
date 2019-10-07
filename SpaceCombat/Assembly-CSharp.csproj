@@ -54,40 +54,40 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\_Scripts\BackgroundScrollScript\BGScroll.cs" />
-     <Compile Include="Assets\_Scripts\BulletScripts\BulletScript.cs" />
+     <Compile Include="Assets\_Scripts\BulletScript.cs" />
      <Compile Include="Assets\_Scripts\PlayerScripts\PlayerController.cs" />
  <Reference Include="Unity.Timeline.Editor">
- <HintPath>/home/morgan/GMIT/modules/MAD3/_SpaceCombat/SpaceCombat/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+ <HintPath>/home/morgan/GMIT/modules/MAD3/Space_Combat/SpaceCombat/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.VSCode.Editor">
- <HintPath>/home/morgan/GMIT/modules/MAD3/_SpaceCombat/SpaceCombat/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+ <HintPath>/home/morgan/GMIT/modules/MAD3/Space_Combat/SpaceCombat/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro.Editor">
- <HintPath>/home/morgan/GMIT/modules/MAD3/_SpaceCombat/SpaceCombat/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+ <HintPath>/home/morgan/GMIT/modules/MAD3/Space_Combat/SpaceCombat/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.UI">
- <HintPath>/home/morgan/GMIT/modules/MAD3/_SpaceCombat/SpaceCombat/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+ <HintPath>/home/morgan/GMIT/modules/MAD3/Space_Combat/SpaceCombat/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Timeline">
- <HintPath>/home/morgan/GMIT/modules/MAD3/_SpaceCombat/SpaceCombat/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+ <HintPath>/home/morgan/GMIT/modules/MAD3/Space_Combat/SpaceCombat/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
  </Reference>
  <Reference Include="Unity.CollabProxy.Editor">
- <HintPath>/home/morgan/GMIT/modules/MAD3/_SpaceCombat/SpaceCombat/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+ <HintPath>/home/morgan/GMIT/modules/MAD3/Space_Combat/SpaceCombat/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Rider.Editor">
- <HintPath>/home/morgan/GMIT/modules/MAD3/_SpaceCombat/SpaceCombat/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+ <HintPath>/home/morgan/GMIT/modules/MAD3/Space_Combat/SpaceCombat/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.2D.Sprite.Editor">
- <HintPath>/home/morgan/GMIT/modules/MAD3/_SpaceCombat/SpaceCombat/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
+ <HintPath>/home/morgan/GMIT/modules/MAD3/Space_Combat/SpaceCombat/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.2D.Tilemap.Editor">
- <HintPath>/home/morgan/GMIT/modules/MAD3/_SpaceCombat/SpaceCombat/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
+ <HintPath>/home/morgan/GMIT/modules/MAD3/Space_Combat/SpaceCombat/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro">
- <HintPath>/home/morgan/GMIT/modules/MAD3/_SpaceCombat/SpaceCombat/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+ <HintPath>/home/morgan/GMIT/modules/MAD3/Space_Combat/SpaceCombat/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.UI">
- <HintPath>/home/morgan/GMIT/modules/MAD3/_SpaceCombat/SpaceCombat/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+ <HintPath>/home/morgan/GMIT/modules/MAD3/Space_Combat/SpaceCombat/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>/home/morgan/Downloads/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>

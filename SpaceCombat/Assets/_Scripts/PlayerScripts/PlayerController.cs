@@ -34,9 +34,11 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         Move();
+        Attack();
     }
 
-    private void Move(){
+    private void Move()
+    {
         var deltaX = Input.GetAxis("Horizontal") * Time.deltaTime * movementSpeed;
         var deltaY = Input.GetAxis("Vertical") * Time.deltaTime * movementSpeed;
 
@@ -51,5 +53,13 @@ public class PlayerController : MonoBehaviour
                 Mathf.Clamp(newXPos, boundary.xMin, boundary.xMax),
                 Mathf.Clamp(newYPos, boundary.yMin, boundary.yMax)
             );
+    }
+
+    void Attack() 
+    {
+        if (Input.GetKeyDown(KeyCode.K)) {
+            Instantiate(player_bullet, attack_point.position, Quaternion.identity);
+        }
+
     }
 } // class
