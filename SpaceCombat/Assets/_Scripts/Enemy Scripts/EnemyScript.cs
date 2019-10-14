@@ -39,12 +39,14 @@ public class EnemyScript : MonoBehaviour
             {
                 rotate_speed = Random.Range(rotate_speed, rotate_speed + 20f);
                 rotate_speed *= -1f; // Clockwise / anticlock wise random rotation
-            } else {
+            }
+            else
+            {
                 rotate_speed = Random.Range(rotate_speed, rotate_speed + 20f);
             }
         }
 
-        if(canShoot)
+        if (canShoot)
         {
             Invoke("StartShooting", Random.Range(1f, 3f));
         }
@@ -89,11 +91,40 @@ public class EnemyScript : MonoBehaviour
         GameObject bullet = Instantiate(bullet_prefab, attack_point.position, Quaternion.identity);
         bullet.GetComponent<DefaultBulletScript>().is_enemyBullet = true;
 
-        if(canShoot)
+        if (canShoot)
         {
-            Invoke("StartShooting", Random.Range(1f, 3f));
+            Invoke("StartShooting", Random.Range(0.5f, 1f));
         }
     }
+
+    /*
+     * If the player hits an obect do the following
+     * Turn off canMove
+     * And: If it can shoot; set it to false
+     */
+    // void TurnOffGameObject()
+    // {
+    //     gameObject.SetActive(false);
+    // }
+
+    // void OnTriggerEnter2D(Collider2D target)
+    // {
+    //     if (target.tag == "Bullet")
+    //     {
+    //         canMove = false;
+
+    //         if (canShoot)
+    //         {
+    //             canShoot = false;
+    //             CancelInvoke("StartShooting");
+    //         }
+
+    //         Invoke("TurnOffGameObject", 1.0f);
+
+    //         // Play explosion sound
+    //         // Play explosion animation
+    //     }
+    // }
 
 
 

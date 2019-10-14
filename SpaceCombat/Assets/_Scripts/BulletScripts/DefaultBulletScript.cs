@@ -7,7 +7,6 @@ using UnityEngine;
  * https://www.youtube.com/watch?v=rVSLczG1M1E
  */
 
-
 public class DefaultBulletScript : MonoBehaviour
 {
     // == public fields ==
@@ -25,7 +24,7 @@ public class DefaultBulletScript : MonoBehaviour
         {
             speed *= -1f;
         }
-        
+
         // Calls function after x amount of time
         Invoke("DeactivateGameObject", deactivate_timer);
     }
@@ -49,4 +48,13 @@ public class DefaultBulletScript : MonoBehaviour
     {
         gameObject.SetActive(false);
     }
+
+    // // Destroying game object
+    // void OnTriggerEnter2D(Collider2D target)
+    // {
+    //     if (target.tag == "Bullet" || target.tag == "Enemy")
+    //     {
+    //         gameObject.SetActive(false);
+    //     }
+    // }
 }

@@ -24,11 +24,14 @@ public class EnemySpawnerScript : MonoBehaviour
         Vector3 temp = transform.position;
         temp.x = pos_X;
 
-        if (Random.Range(0,2) > 0) {
+        if (Random.Range(0, 2) > 0)
+        {
             // 50 50 chance to spawn asteroid or enemy
             Instantiate(asteroid_prefabs[Random.Range(0, asteroid_prefabs.Length)],
             temp, Quaternion.identity);
-        } else {
+        }
+        else
+        {
             Instantiate(enemyPrefab, temp, Quaternion.Euler(0f, 0f, 180f));
         }
 
