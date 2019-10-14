@@ -30,6 +30,17 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private Transform attack_point;
 
+    // Restricting shooting
+    public float attack_timer = 0.35f;
+    private float current_attack_timer;
+    private bool canAttack;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        current_attack_timer = attack_timer;
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -55,11 +66,28 @@ public class PlayerController : MonoBehaviour
             );
     }
 
-    void Attack() 
+    void Attack()
     {
-        if (Input.GetKeyDown(KeyCode.K)) {
-            Instantiate(player_bullet, attack_point.position, Quaternion.identity);
+        attack_timer += Time.deltaTime;
+        if (attack_timer > current_attack_timer)
+        {
+            canAttack = true;
         }
 
+        // Player can attack, assuming canAttack is true
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            if (canAttack)
+            {
+                // Set canAttack to False and reset timer
+                canAttack = false;
+                attack_timer = 0.0f;
+
+                // Create new bullet at the attack point
+                Instantiate(player_bullet, attack_point.position, Quaternion.identity);
+
+                // Play sound FX
+            }
+        }
     }
 } // class

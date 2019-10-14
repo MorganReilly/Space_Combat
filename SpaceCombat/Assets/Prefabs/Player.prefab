@@ -199,6 +199,7 @@ MonoBehaviour:
     yMin: -4.7
     yMax: 1.5
   movementSpeed: 5
-  player_bullet: {fileID: 2144669318725338278, guid: 44e33dc0e5504608a91b12aef3120b2e,
+  player_bullet: {fileID: 137462577415057015, guid: 44e33dc0e5504608a91b12aef3120b2e,
     type: 3}
   attack_point: {fileID: 5865478533141032837}
+  attack_timer: 0.5
