@@ -14,9 +14,18 @@ public class DefaultBulletScript : MonoBehaviour
     public float speed = 5.0f; // Bullet Speed
     public float deactivate_timer = 3.0f;
 
+    [HideInInspector]
+    public bool is_enemyBullet = false;
+
     // Start is called before the first frame update
     void Start()
     {
+        // Test if is enemy bullet
+        if (is_enemyBullet)
+        {
+            speed *= -1f;
+        }
+        
         // Calls function after x amount of time
         Invoke("DeactivateGameObject", deactivate_timer);
     }

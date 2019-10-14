@@ -6,8 +6,8 @@ public class EnemyScript : MonoBehaviour
 {
 
     // Variables
-    public float speed = 5.0f;
-    public float rotate_speed = 20f; // Used for asteroids later on
+    public float speed = 3.0f;
+    public float rotate_speed = 5.0f; // Used for asteroids later on
 
     public bool canShoot;
     public bool canRotate;
@@ -43,6 +43,11 @@ public class EnemyScript : MonoBehaviour
                 rotate_speed = Random.Range(rotate_speed, rotate_speed + 20f);
             }
         }
+
+        if(canShoot)
+        {
+            Invoke("StartShooting", Random.Range(1f, 3f));
+        }
     }
 
     // Update is called once per frame
@@ -76,6 +81,17 @@ public class EnemyScript : MonoBehaviour
         if (canRotate)
         {
             transform.Rotate(new Vector3(0f, 0f, rotate_speed * Time.deltaTime), Space.World);
+        }
+    }
+
+    void StartShooting()
+    {
+        GameObject bullet = Instantiate(bullet_prefab, attack_point.position, Quaternion.identity);
+        bullet.GetComponent<DefaultBulletScript>().is_enemyBullet = true;
+
+        if(canShoot)
+        {
+            Invoke("StartShooting", Random.Range(1f, 3f));
         }
     }
 

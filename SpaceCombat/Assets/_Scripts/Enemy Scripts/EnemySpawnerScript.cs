@@ -29,7 +29,7 @@ public class EnemySpawnerScript : MonoBehaviour
             Instantiate(asteroid_prefabs[Random.Range(0, asteroid_prefabs.Length)],
             temp, Quaternion.identity);
         } else {
-            Instantiate(enemyPrefab, temp, Quaternion.Euler(0f, 0f, -180f));
+            Instantiate(enemyPrefab, temp, Quaternion.Euler(0f, 0f, 180f));
         }
 
         Invoke("SpawnEnemies", timer);
