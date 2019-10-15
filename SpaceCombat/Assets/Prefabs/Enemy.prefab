@@ -240,9 +240,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 162218e88d7c7e6e291bdd4c21e9b436, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
+  speed: 6
   rotate_speed: 50
-  canShoot: 1
+  canShoot: 0
   canRotate: 0
   bound_Y: -11
   attack_point: {fileID: 8360110087941189677}

@@ -142,6 +142,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fbbfe811c16a041b8f3af85d8aed8c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 6
+  speed: 12
   deactivate_timer: 3
   is_enemyBullet: 0

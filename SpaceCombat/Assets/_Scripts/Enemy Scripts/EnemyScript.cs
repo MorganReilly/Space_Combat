@@ -13,13 +13,10 @@ public class EnemyScript : MonoBehaviour
     public bool canRotate;
     private bool canMove = true;
 
-    public float bound_Y = -5f; // Deactivate for memory conservation
+    public float bound_Y = -10f; // Deactivate for memory conservation
 
-    [SerializeField]
-    private Transform attack_point;
-
-    [SerializeField]
-    private GameObject bullet_prefab;
+    public Transform attack_point;
+    public GameObject bullet_prefab;
 
     private Animator animator;
     private AudioSource explosionSound;
@@ -48,7 +45,7 @@ public class EnemyScript : MonoBehaviour
 
         if (canShoot)
         {
-            Invoke("StartShooting", Random.Range(1f, 3f));
+            Invoke("StartShooting", Random.Range(0.5f, 1f));
         }
     }
 
@@ -102,29 +99,29 @@ public class EnemyScript : MonoBehaviour
      * Turn off canMove
      * And: If it can shoot; set it to false
      */
-    // void TurnOffGameObject()
-    // {
-    //     gameObject.SetActive(false);
-    // }
+    void TurnOffGameObject()
+    {
+        gameObject.SetActive(false);
+    }
 
-    // void OnTriggerEnter2D(Collider2D target)
-    // {
-    //     if (target.tag == "Bullet")
-    //     {
-    //         canMove = false;
+    void OnTriggerEnter2D(Collider2D target)
+    {
+        if (target.tag == "Bullet")
+        {
+            canMove = false;
 
-    //         if (canShoot)
-    //         {
-    //             canShoot = false;
-    //             CancelInvoke("StartShooting");
-    //         }
+            if (canShoot)
+            {
+                canShoot = false;
+                CancelInvoke("StartShooting");
+            }
 
-    //         Invoke("TurnOffGameObject", 1.0f);
+            Invoke("TurnOffGameObject", 1.0f);
 
-    //         // Play explosion sound
-    //         // Play explosion animation
-    //     }
-    // }
+            // Play explosion sound
+            // Play explosion animation
+        }
+    }
 
 
 

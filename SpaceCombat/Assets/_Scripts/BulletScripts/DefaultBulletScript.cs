@@ -49,12 +49,12 @@ public class DefaultBulletScript : MonoBehaviour
         gameObject.SetActive(false);
     }
 
-    // // Destroying game object
-    // void OnTriggerEnter2D(Collider2D target)
-    // {
-    //     if (target.tag == "Bullet" || target.tag == "Enemy")
-    //     {
-    //         gameObject.SetActive(false);
-    //     }
-    // }
+    // Destroying game object
+    void OnTriggerEnter2D(Collider2D target)
+    {
+        if (target.tag == "Bullet" || target.tag == "Enemy")
+        {
+            gameObject.SetActive(false);
+        }
+    }
 }
