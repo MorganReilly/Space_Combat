@@ -4,6 +4,31 @@ using UnityEngine;
 
 public class EnemyScript : MonoBehaviour
 {
+    // Inner class for player statistics
+    [SerializeField]
+    public class EnemyPlayerStats
+    {
+        public int maxEnemyPlayerHealth = 100;
+
+        private int _curEnemyHealth;
+        public int curEnemyHealth
+        {
+            get { return _curEnemyHealth; }
+            // Setting a clamp on the setter so players health is set correctly to value
+            set { _curEnemyHealth = Mathf.Clamp(value, 0, maxEnemyPlayerHealth); }
+        }
+
+        public void Init()
+        {
+            curEnemyHealth = maxEnemyPlayerHealth;
+        }
+    }
+
+    // Cerate new enemy player stats object
+    public EnemyPlayerStats enemyPlayerStats = new EnemyPlayerStats();
+
+    [SerializeField]
+    private StatusIndicator statusIndicator;
 
     // Variables
     public float speed = 3.0f;
@@ -30,6 +55,13 @@ public class EnemyScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        enemyPlayerStats.Init();
+
+        if (statusIndicator != null)
+        {
+            statusIndicator.SetHealth(enemyPlayerStats.curEnemyHealth, enemyPlayerStats.maxEnemyPlayerHealth);
+        }
+
         if (canRotate)
         {
             if (Random.Range(0, 2) > 0)
@@ -123,6 +155,20 @@ public class EnemyScript : MonoBehaviour
         }
     }
 
+    public void DamageEnemy(int damage)
+    {
+        enemyPlayerStats.curEnemyHealth -= damage;
+        if (enemyPlayerStats.curEnemyHealth <= 0)
+        {
+            //GameMaster.KillEnemy(this);
+        }
+
+        // Setting health for status bar
+        if (statusIndicator != null)
+        {
+            statusIndicator.SetHealth(enemyPlayerStats.curEnemyHealth, enemyPlayerStats.maxEnemyPlayerHealth);
+        }
+    }
 
 
 } // class

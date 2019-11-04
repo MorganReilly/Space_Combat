@@ -23,8 +23,9 @@ public class EnemySpawnerScript : MonoBehaviour
         float pos_X = Random.Range(min_X, max_X);
         Vector3 temp = transform.position;
         temp.x = pos_X;
-        // Change to (0,2)
-        if (Random.Range(0, 0) > 0)
+        // Change to (0,2) if random
+        // Change to (0,0) player testing
+        if (Random.Range(0, 2) > 0)
         {
             // 50 50 chance to spawn asteroid or enemy
             Instantiate(asteroid_prefabs[Random.Range(0, asteroid_prefabs.Length)],

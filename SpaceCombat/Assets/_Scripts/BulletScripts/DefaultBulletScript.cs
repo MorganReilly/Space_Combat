@@ -9,9 +9,10 @@ using UnityEngine;
 
 public class DefaultBulletScript : MonoBehaviour
 {
-    // == public fields ==
     public float speed = 5.0f; // Bullet Speed
     public float deactivate_timer = 3.0f;
+
+    public float bullet_damage = 10; // Bullet damage
 
     [HideInInspector]
     public bool is_enemyBullet = false;

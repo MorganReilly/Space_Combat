@@ -57,7 +57,9 @@
      <Compile Include="Assets\_Scripts\BulletScripts\DefaultBulletScript.cs" />
      <Compile Include="Assets\_Scripts\Enemy Scripts\EnemyScript.cs" />
      <Compile Include="Assets\_Scripts\Enemy Scripts\EnemySpawnerScript.cs" />
+     <Compile Include="Assets\_Scripts\GameMaster.cs" />
      <Compile Include="Assets\_Scripts\PlayerScripts\PlayerController.cs" />
+     <Compile Include="Assets\_Scripts\StatusIndicator.cs" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>/home/morgan/GMIT/modules/MAD3/Space_Combat/SpaceCombat/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>
