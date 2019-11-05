@@ -33,6 +33,7 @@ public class Player : MonoBehaviour
     public void DamagePlayer(int damage)
     {
         playerStats.playerHealth -= damage;
+        Debug.Log("Health: " + playerStats.playerHealth);
 
         if (playerStats.playerHealth <= 0)
         {
