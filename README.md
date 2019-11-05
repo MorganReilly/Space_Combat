@@ -10,6 +10,7 @@ Version control for MAD3 game development
 ### Current reference list:
 * https://learn.unity.com/project/space-shooter-tutorial
 * https://www.youtube.com/watch?v=XCOTK-a-1cc
+* https://www.youtube.com/watch?v=zwNGjS_1Lxk
 
 ### Current working test platforms:
 * Ubuntu 18.04
