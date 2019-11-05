@@ -60,6 +60,7 @@
      <Compile Include="Assets\_Scripts\GameMaster.cs" />
      <Compile Include="Assets\_Scripts\PlayerController.cs" />
      <Compile Include="Assets\_Scripts\StatusIndicator.cs" />
+     <Compile Include="Assets\_Scripts\Weapon.cs" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>/home/morgan/GMIT/modules/MAD3/Space_Combat/SpaceCombat/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>

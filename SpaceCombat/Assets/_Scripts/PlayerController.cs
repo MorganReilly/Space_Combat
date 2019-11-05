@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-/* References:
+/* Adapted from:
  * https://www.youtube.com/watch?v=XCOTK-a-1cc
  * https://www.youtube.com/watch?v=rVSLczG1M1E
  * https://youtu.be/eSLx1-iA9RM
@@ -48,16 +48,16 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private float movementSpeed = 5.0f;
 
-    [SerializeField]
-    private GameObject player_bullet;
+    // [SerializeField]
+    // private GameObject player_bullet;
 
-    [SerializeField]
-    private Transform attack_point; // Used for player bullet spawn point
+    //[SerializeField]
+    //private Transform attack_point; // Used for player bullet spawn point
 
     // Restricting shooting
-    public float attack_timer = 0.35f;
-    private float current_attack_timer;
-    private bool canAttack;
+    // public float attack_timer = 0.35f;
+    //private float current_attack_timer;
+    // private bool canAttack;
 
     // Start is called before the first frame update
     void Start()
@@ -78,14 +78,14 @@ public class PlayerController : MonoBehaviour
         {
             Debug.LogError("No attack point set for player - Player cannot fire");
         }
-        current_attack_timer = attack_timer;
+        // current_attack_timer = attack_timer;
     }
 
     // Update is called once per frame
     void Update()
     {
         Move();
-        Attack();
+        // Attack();
 
         // Find collision for 
     }
@@ -108,6 +108,7 @@ public class PlayerController : MonoBehaviour
             );
     }
 
+    /* 
     void Attack()
     {
         attack_timer += Time.deltaTime;
@@ -156,5 +157,6 @@ public class PlayerController : MonoBehaviour
         }
 
     }
+    */
 
 } // class
