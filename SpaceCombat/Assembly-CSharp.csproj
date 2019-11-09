@@ -54,9 +54,13 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\_Scripts\BGScroll.cs" />
+     <Compile Include="Assets\_Scripts\Bullet.cs" />
      <Compile Include="Assets\_Scripts\DefaultBulletScript.cs" />
-     <Compile Include="Assets\_Scripts\EnemyScript.cs" />
+     <Compile Include="Assets\_Scripts\Enemy.cs" />
+     <Compile Include="Assets\_Scripts\EnemyBullet.cs" />
+     <Compile Include="Assets\_Scripts\EnemyController.cs" />
      <Compile Include="Assets\_Scripts\EnemySpawnerScript.cs" />
+     <Compile Include="Assets\_Scripts\EnemyWeapon.cs" />
      <Compile Include="Assets\_Scripts\GameMaster.cs" />
      <Compile Include="Assets\_Scripts\Player.cs" />
      <Compile Include="Assets\_Scripts\PlayerController.cs" />

@@ -9,21 +9,51 @@ public class Player : MonoBehaviour
 {
     // Player stats inner-class
     // Group functionality
-    [System.Serializable] // Tells unity to display class
+    [System.Serializable]
     public class PlayerStats
     {
-        public int playerHealth = 100;
+        public int maxHealth = 100;
+
+        private int _curHealth;
+
+        public int curHealth
+        {
+            get { return _curHealth; }
+            set { _curHealth = Mathf.Clamp(value, 0, maxHealth); } // Set constraints between 0 and max health.
+        }
+
+        // Set current health = maxHealth at game start
+        // Can use for more later on
+        public void Init()
+        {
+            curHealth = maxHealth;
+        }
     }
 
     // instatnce of playerstats class
     public PlayerStats playerStats = new PlayerStats();
+
+    [Header("Optional: ")] // This tells unity to mark this as an optional field
+    [SerializeField]
+    private StatusIndicator statusIndicator;
+
+    void Start()
+    {
+        playerStats.Init();
+
+        // null check on statusIndicator
+        if (statusIndicator == null)
+        {
+            statusIndicator.SetHealth(playerStats.curHealth, playerStats.maxHealth);
+        }
+    }
 
     public int fallBoundary = -1;
 
     // Update method
     void Update()
     {
-        // Debugging damage
+        // Kill player if he goes out of bounds
         if (transform.position.y <= fallBoundary)
         {
             DamagePlayer(101);
@@ -32,15 +62,23 @@ public class Player : MonoBehaviour
 
     public void DamagePlayer(int damage)
     {
-        playerStats.playerHealth -= damage;
-        Debug.Log("Health: " + playerStats.playerHealth);
+        playerStats.curHealth -= damage;
+        Debug.Log("Health: " + playerStats.curHealth);
 
-        if (playerStats.playerHealth <= 0)
+        if (playerStats.curHealth <= 0)
         {
-            Debug.Log("Kill Player");
-            GameMaster.KillPlayer(this); // passes Player object
+            Die();
+        }
+
+        // null check on statusIndicator
+        if (statusIndicator == null)
+        {
+            statusIndicator.SetHealth(playerStats.curHealth, playerStats.maxHealth);
         }
     }
 
-
+    void Die()
+    {
+        GameMaster.KillPlayer(this); // passes Player object
+    }
 }

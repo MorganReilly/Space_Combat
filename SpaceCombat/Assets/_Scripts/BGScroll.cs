@@ -4,17 +4,16 @@ using UnityEngine;
 
 public class BGScroll : MonoBehaviour
 {
-
     // Set speed of background scroll
-    public float scroll_speed = 0.1f;
+    private float scroll_speed = 0.1f;
 
     // Create new instance of a mesh renderer for background
     private MeshRenderer mesh_renderer;
 
     private float y_scroll;
 
-
-    void Awake() {
+    void Awake()
+    {
         mesh_renderer = GetComponent<MeshRenderer>();
     }
 
@@ -24,7 +23,8 @@ public class BGScroll : MonoBehaviour
         Scroll();
     }
 
-    void Scroll(){
+    void Scroll()
+    {
         y_scroll = Time.time * scroll_speed;
 
         Vector2 offset = new Vector2(0f, y_scroll);

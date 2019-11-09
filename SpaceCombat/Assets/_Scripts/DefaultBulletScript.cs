@@ -14,8 +14,7 @@ public class DefaultBulletScript : MonoBehaviour
 
     public float bullet_damage = 10; // Bullet damage
 
-    [HideInInspector]
-    public bool is_enemyBullet = false;
+    [HideInInspector] public bool is_enemyBullet = false;
 
     // Start is called before the first frame update
     void Start()

@@ -19,8 +19,7 @@ public class PlayerController : MonoBehaviour
 {
     public Boundary boundary;
 
-    [SerializeField]
-    private float movementSpeed = 5.0f;
+    [SerializeField] private float movementSpeed = 5.0f;
 
     // Update is called once per frame
     void Update()
@@ -40,10 +39,9 @@ public class PlayerController : MonoBehaviour
         transform.position = new Vector2(newXPos, newYPos);
 
         transform.position = new Vector2
-            (
-                Mathf.Clamp(newXPos, boundary.xMin, boundary.xMax),
-                Mathf.Clamp(newYPos, boundary.yMin, boundary.yMax)
-            );
+        (
+            Mathf.Clamp(newXPos, boundary.xMin, boundary.xMax),
+            Mathf.Clamp(newYPos, boundary.yMin, boundary.yMax)
+        );
     }
-
 } // class
