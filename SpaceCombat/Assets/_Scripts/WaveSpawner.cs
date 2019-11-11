@@ -21,7 +21,7 @@ public class WaveSpawner : MonoBehaviour
     private int nextWave = 0;
     public int NextWave
     {
-        get { return nextWave; }
+        get { return nextWave + 1; }
     }
 
     public Transform[] spawnPoints;

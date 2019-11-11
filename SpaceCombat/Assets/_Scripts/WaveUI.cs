@@ -10,6 +10,8 @@ public class WaveUI : MonoBehaviour
     [SerializeField] Text waveCountdownText;
     [SerializeField] Text waveCountText;
 
+    private WaveSpawner.SpawnState previousState;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -48,16 +50,42 @@ public class WaveUI : MonoBehaviour
                 UpdateSpawningUI();
                 break;
         }
+
+        previousState = waveSpawner.State;
     }
 
     void UpdateCountingUI()
     {
-        Debug.Log("Counting");
+        // Debug.Log("Counting");
+        // Trigger counting animation once
+        if (previousState != WaveSpawner.SpawnState.Counting)
+        {
+            // Can't have multiple states at once
+            // ie, one true, one false
+            waveAnimator.SetBool("WaveIncomming", false);
+            waveAnimator.SetBool("WaveCountdown", true);
+            // Debug.Log("Counting");
+        }
+
+        // Update text
+        waveCountdownText.text = ((int)waveSpawner.WaveCountdown).ToString();
+
     }
 
-    
+
     void UpdateSpawningUI()
     {
-        Debug.Log("Spawning");
+        // Debug.Log("Spawning");
+        if (previousState != WaveSpawner.SpawnState.Spawning)
+        {
+            // Can't have multiple states at once
+            // ie, one true, one false
+            waveAnimator.SetBool("WaveIncomming", true);
+            waveAnimator.SetBool("WaveCountdown", false);
+
+            // Update text
+            waveCountText.text = waveSpawner.NextWave.ToString();
+            // Debug.Log("Spawning");
+        }
     }
 }

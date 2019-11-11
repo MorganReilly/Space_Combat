@@ -834,6 +834,7 @@ GameObject:
   - component: {fileID: 1707429548}
   - component: {fileID: 1707429549}
   - component: {fileID: 1707429550}
+  - component: {fileID: 1707429551}
   m_Layer: 5
   m_Name: WaveUI
   m_TagString: Untagged
@@ -888,7 +889,7 @@ Animator:
   m_GameObject: {fileID: 1707429547}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: d1ba6b7d9305814b1aafb44b143e9047, type: 2}
+  m_Controller: {fileID: 9100000, guid: 401f03fdd31fd4c6c84e98b7ad782aed, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -897,6 +898,22 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1707429551
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1707429547}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c246e2bb0249fabf9e298aafe1fd9f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waveSpawner: {fileID: 84154470}
+  waveAnimator: {fileID: 1707429550}
+  waveCountdownText: {fileID: 760135675}
+  waveCountText: {fileID: 391203781}
 --- !u!1 &1849611682
 GameObject:
   m_ObjectHideFlags: 0
@@ -1348,6 +1365,11 @@ PrefabInstance:
         type: 3}
       propertyPath: waves.Array.data[2].count
       value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 514281513855583942, guid: fceb52d6a7fdfea118490df1b698aae6,
+        type: 3}
+      propertyPath: timeBetweenWaves
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2771888593736229784, guid: fceb52d6a7fdfea118490df1b698aae6,
         type: 3}
