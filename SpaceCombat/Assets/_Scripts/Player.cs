@@ -30,6 +30,9 @@ public class Player : MonoBehaviour
         }
     }
 
+    // Fall boundary
+    public int fallBoundary = -10;
+
     // instatnce of playerstats class
     public PlayerStats playerStats = new PlayerStats();
 
@@ -41,14 +44,15 @@ public class Player : MonoBehaviour
     {
         playerStats.Init();
 
-        // null check on statusIndicator
         if (statusIndicator == null)
+        {
+            Debug.LogError("No status indicator referenced on Player");
+        }
+        else
         {
             statusIndicator.SetHealth(playerStats.curHealth, playerStats.maxHealth);
         }
     }
-
-    public int fallBoundary = -1;
 
     // Update method
     void Update()
@@ -56,7 +60,7 @@ public class Player : MonoBehaviour
         // Kill player if he goes out of bounds
         if (transform.position.y <= fallBoundary)
         {
-            DamagePlayer(101);
+            GameMaster.KillPlayer(this);
         }
     }
 
@@ -67,18 +71,8 @@ public class Player : MonoBehaviour
 
         if (playerStats.curHealth <= 0)
         {
-            Die();
+            GameMaster.KillPlayer(this);
         }
-
-        // null check on statusIndicator
-        if (statusIndicator == null)
-        {
-            statusIndicator.SetHealth(playerStats.curHealth, playerStats.maxHealth);
-        }
-    }
-
-    void Die()
-    {
-        GameMaster.KillPlayer(this); // passes Player object
+        statusIndicator.SetHealth(playerStats.curHealth, playerStats.maxHealth);
     }
 }

@@ -6,11 +6,21 @@ public class EnemyBullet : MonoBehaviour
 {
     public float speed = 20f;
     public Rigidbody2D rb;
-    public int damage = 101;
+    // Fall boundary
+    public int outOfBounds = -10;
 
     void Start()
     {
         rb.velocity = transform.up * speed;
+    }
+
+    // Update method
+    void Update()
+    {
+        if (transform.position.y <= outOfBounds)
+        {
+            Destroy(gameObject);
+        }
     }
 
     void OnTriggerEnter2D(Collider2D hitInfo)

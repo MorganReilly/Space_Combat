@@ -23,7 +23,7 @@ public class StatusIndicator : MonoBehaviour
 
     public void SetHealth(int _curHealth, int _maxHealth)
     {
-        float _value = (float) _curHealth / _maxHealth;
+        float _value = (float)_curHealth / _maxHealth;
 
         healthBarRect.localScale =
             new Vector3(_value, healthBarRect.localScale.y, healthBarRect.localScale.z); // Change scale of health bar

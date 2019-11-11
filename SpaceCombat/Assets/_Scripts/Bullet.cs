@@ -6,11 +6,19 @@ public class Bullet : MonoBehaviour
 {
     public float speed = 20f;
     public Rigidbody2D rb;
-    public int damage = 101;
+    public float outOfBounds = 6f;
 
     void Start()
     {
         rb.velocity = transform.up * speed;
+    }
+
+    void Update()
+    {
+        if (transform.position.y >= outOfBounds)
+        {
+            Destroy(gameObject);
+        }
     }
 
     void OnTriggerEnter2D(Collider2D hitInfo)

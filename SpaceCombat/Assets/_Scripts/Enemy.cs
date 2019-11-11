@@ -9,6 +9,7 @@ public class Enemy : MonoBehaviour
     public class EnemyStats
     {
         public int maxHealth = 100;
+        public int damage = 40;
 
         private int _curHealth;
 
@@ -28,6 +29,8 @@ public class Enemy : MonoBehaviour
 
     public EnemyStats enemyStats = new EnemyStats();
 
+    [SerializeField] public int fallBoundary = -50;
+
     [Header("Optional: ")] // This tells unity to mark this as an optional field
     [SerializeField]
     private StatusIndicator statusIndicator;
@@ -36,14 +39,11 @@ public class Enemy : MonoBehaviour
     {
         enemyStats.Init();
 
-        // null check on statusIndicator
-        if (statusIndicator == null)
+        if (statusIndicator != null)
         {
             statusIndicator.SetHealth(enemyStats.curHealth, enemyStats.maxHealth);
         }
     }
-
-    [SerializeField] public int fallBoundary = -50;
 
     // Update method
     void Update()
@@ -51,7 +51,7 @@ public class Enemy : MonoBehaviour
         // Debugging damage
         if (transform.position.y <= fallBoundary)
         {
-            DamageEnemy(101);
+            GameMaster.KillEnemy(this);
         }
     }
 
@@ -61,18 +61,23 @@ public class Enemy : MonoBehaviour
 
         if (enemyStats.curHealth <= 0)
         {
-            Die();
+            // Die();
+            GameMaster.KillEnemy(this);
         }
 
         // null check on statusIndicator
-        if (statusIndicator == null)
+        if (statusIndicator != null)
         {
             statusIndicator.SetHealth(enemyStats.curHealth, enemyStats.maxHealth);
         }
     }
 
-    void Die()
+    void OnCollisionEnter2D(Collision2D _colInfo)
     {
-        Destroy(gameObject);
+        Player _player = _colInfo.collider.GetComponent<Player>();
+        if (_player != null){
+            _player.DamagePlayer(enemyStats.damage);
+            GameMaster.KillEnemy(this);
+        }
     }
 }

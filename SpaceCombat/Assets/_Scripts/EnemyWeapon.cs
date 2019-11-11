@@ -29,6 +29,7 @@ public class EnemyWeapon : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        int counter = 0;
         // Shoot(); // Debugging - Constant fire
         // Check fire rate: single burst
         if (fireRate == 0)

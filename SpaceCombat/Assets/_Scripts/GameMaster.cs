@@ -26,6 +26,7 @@ public class GameMaster : MonoBehaviour
 
     public IEnumerator RespawnPlayer()
     {
+        
         // Countdown timer for spawn delay
         yield return new WaitForSeconds(spawnDelay);
         Instantiate(playerPrefab, spawnPoint.position, spawnPoint.rotation);
@@ -36,5 +37,10 @@ public class GameMaster : MonoBehaviour
         // destroy player
         Destroy(player.gameObject);
         gm.StartCoroutine(gm.RespawnPlayer());
+    }
+
+    public static void KillEnemy(Enemy enemy)
+    {
+        Destroy(enemy.gameObject);
     }
 }
