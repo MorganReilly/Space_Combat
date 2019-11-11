@@ -29,7 +29,6 @@ public class EnemyWeapon : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        int counter = 0;
         // Shoot(); // Debugging - Constant fire
         // Check fire rate: single burst
         if (fireRate == 0)
@@ -47,23 +46,5 @@ public class EnemyWeapon : MonoBehaviour
     void Shoot()
     {
         Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
-        /*
-        // Shooting Logic
-        Debug.Log("Shoot");
-        // TODO: Change to single line vector
-        Vector2 mousePosition = new Vector2(Camera.main.ScreenToWorldPoint(Input.mousePosition).x, Camera.main.ScreenToWorldPoint(Input.mousePosition).y);
-        Vector2 firePointPosition = new Vector2(firePoint.position.x, firePoint.position.y);
-        RaycastHit2D hit = Physics2D.Raycast(firePointPosition, mousePosition - firePointPosition, 100, toHit); // Origin, directon, distance, layerMask
-
-        Debug.DrawLine(firePointPosition, (mousePosition - firePointPosition) * 100, Color.black);
-
-        // Check for collision detection
-        if (hit.collider != null)
-        {
-            // Makes line of anything hit red
-            Debug.DrawLine(firePointPosition, hit.point, Color.red);
-            Debug.Log("Hit object: " + hit.collider.name + " Damage dealt: " + Damage + " damage");
-        }
-        */
     }
 }

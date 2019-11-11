@@ -19,15 +19,27 @@ public class WaveSpawner : MonoBehaviour
 
     public Wave[] waves;
     private int nextWave = 0;
+    public int NextWave
+    {
+        get { return nextWave; }
+    }
 
     public Transform[] spawnPoints;
 
     public float timeBetweenWaves = 5f;
     private float waveCountdown;
+    public float WaveCountdown
+    {
+        get { return waveCountdown; }
+    }
 
     private float searchCountdown = 1f;
 
     private SpawnState spawnState = SpawnState.Counting;
+    public SpawnState State
+    {
+        get { return spawnState; }
+    }
 
     void Start()
     {
@@ -35,7 +47,7 @@ public class WaveSpawner : MonoBehaviour
         {
             Debug.LogError("No Spawn Points Referenced");
         }
-        
+
         waveCountdown = timeBetweenWaves;
     }
 
@@ -74,7 +86,7 @@ public class WaveSpawner : MonoBehaviour
 
     void WaveCompleted()
     {
-        Debug.Log("Wave Completed!");
+        // Debug.Log("Wave Completed!");
 
         spawnState = SpawnState.Counting;
         waveCountdown = timeBetweenWaves;
@@ -82,7 +94,7 @@ public class WaveSpawner : MonoBehaviour
         if (nextWave + 1 > waves.Length - 1)
         {
             nextWave = 0;
-            Debug.Log("All waves complete! Looping");
+            // Debug.Log("All waves complete! Looping");
 
             // Can add difficulty multiplier here
             // Or could add game completed screen
@@ -126,9 +138,9 @@ public class WaveSpawner : MonoBehaviour
 
     void SpawnEnemy(Transform _enemy)
     {
-        Debug.Log("Spawning enemy: " + _enemy.name);
+        // Debug.Log("Spawning enemy: " + _enemy.name);
 
-        
+
         Transform _sp = spawnPoints[Random.Range(0, spawnPoints.Length)];
         Instantiate(_enemy, _sp.position, _sp.rotation);
     }

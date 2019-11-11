@@ -62,7 +62,7 @@ Transform:
   m_GameObject: {fileID: 7385116965724391224}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.731, y: -2.352, z: 0}
-  m_LocalScale: {x: 1.5, y: 1.2, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7385116965567802362}
   - {fileID: 7385116966388343070}
@@ -173,7 +173,7 @@ MonoBehaviour:
   boundary:
     xMin: -2.6
     xMax: 2.6
-    yMin: -100
+    yMin: -4.5
     yMax: 1.5
   movementSpeed: 5
 --- !u!114 &7385116965724391216
