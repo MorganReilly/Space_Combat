@@ -297,6 +297,8 @@
 "Assets/_Scripts/EnemySpawnerScript.cs"
 "Assets/_Scripts/EnemyWeapon.cs"
 "Assets/_Scripts/GameMaster.cs"
+"Assets/_Scripts/GameOverUI.cs"
+"Assets/_Scripts/LivesCounterUI.cs"
 "Assets/_Scripts/Player.cs"
 "Assets/_Scripts/PlayerController.cs"
 "Assets/_Scripts/StatusIndicator.cs"
