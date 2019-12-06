@@ -17,6 +17,7 @@
       <Path>.vscode</Path>
       <Path>Library</Path>
       <Path>Logs</Path>
+      <Path>obj</Path>
     </explicitExcludes>
   </component>
 </project>

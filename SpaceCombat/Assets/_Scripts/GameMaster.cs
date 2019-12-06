@@ -18,6 +18,7 @@ public class GameMaster : MonoBehaviour
 
     [SerializeField] private GameObject gameOverUI;
 
+    [SerializeField] private int maxLives = 3;
     private static int _remainingLives = 3;
     public static int RemainingLives
     {
@@ -38,6 +39,8 @@ public class GameMaster : MonoBehaviour
         {
             gm = GameObject.FindGameObjectWithTag("GM").GetComponent<GameMaster>();
         }
+
+        _remainingLives = maxLives;
     }
 
     public IEnumerator RespawnPlayer()

@@ -9,16 +9,19 @@
         <e p="_Scripts" t="Include">
           <e p="BGScroll.cs" t="Include" />
           <e p="Bullet.cs" t="Include" />
-          <e p="DefaultBulletScript.cs" t="Include" />
           <e p="Enemy.cs" t="Include" />
           <e p="EnemyBullet.cs" t="Include" />
           <e p="EnemyController.cs" t="Include" />
           <e p="EnemySpawnerScript.cs" t="Include" />
           <e p="EnemyWeapon.cs" t="Include" />
           <e p="GameMaster.cs" t="Include" />
+          <e p="GameOverUI.cs" t="Include" />
+          <e p="LivesCounterUI.cs" t="Include" />
           <e p="Player.cs" t="Include" />
           <e p="PlayerController.cs" t="Include" />
           <e p="StatusIndicator.cs" t="Include" />
+          <e p="WaveSpawner.cs" t="Include" />
+          <e p="WaveUI.cs" t="Include" />
           <e p="Weapon.cs" t="Include" />
         </e>
       </e>
