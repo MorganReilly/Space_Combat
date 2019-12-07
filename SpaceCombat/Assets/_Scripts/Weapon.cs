@@ -16,6 +16,8 @@ public class Weapon : MonoBehaviour
 
     public GameObject bulletPrefab;
 
+    public AudioSource gunFire;
+
     void Awake()
     {
         firePoint = transform.Find("FirePoint");
@@ -36,6 +38,7 @@ public class Weapon : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 Shoot();
+                gunFire.Play();
             }
         }
         // Not single burst
@@ -45,6 +48,7 @@ public class Weapon : MonoBehaviour
             {
                 timeToFire = Time.time + 1 / fireRate;
                 Shoot();
+                gunFire.Play();
             }
         }
     }

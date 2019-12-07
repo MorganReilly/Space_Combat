@@ -68,11 +68,9 @@ public class AudioManager : MonoBehaviour
         {
             GameObject _go = new GameObject("Sound_ " + i + "_" + sounds[i].name);
 
+            _go.transform.SetParent(this.transform);
             sounds[i].SetSource(_go.AddComponent<AudioSource>()); // Doesn't store anything -- Ignored by garbage collection
         }
-
-        // Testing
-        PlaySound("Menu");
     }
 
     // Play sound -- Take in name of sound

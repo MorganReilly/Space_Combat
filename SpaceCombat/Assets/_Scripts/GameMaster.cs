@@ -15,8 +15,13 @@ public class GameMaster : MonoBehaviour
     public Transform playerPrefab;
     public Transform spawnPoint;
     public int spawnDelay = 2;
+    public string spawnSoundName;
 
     [SerializeField] private GameObject gameOverUI;
+
+
+    // Cache this
+    private AudioManager audioManager;
 
     [SerializeField] private int maxLives = 3;
     private static int _remainingLives = 3;
@@ -43,12 +48,22 @@ public class GameMaster : MonoBehaviour
 
     void Start()
     {
+        audioManager.PlaySound(spawnSoundName);
         if (gm == null)
         {
             gm = GameObject.FindGameObjectWithTag("GM").GetComponent<GameMaster>();
         }
 
         _remainingLives = maxLives;
+
+        // Caching
+        audioManager = AudioManager.amInstance;
+
+        // Check if null
+        if (audioManager == null)
+        {
+            Debug.Log("No Audio Manager Found! ");
+        }
     }
 
     public IEnumerator RespawnPlayer()
@@ -79,7 +94,7 @@ public class GameMaster : MonoBehaviour
     public static void KillEnemy(Enemy enemy)
     {
         Destroy(enemy.gameObject);
-        GameMaster.CurrentScore-=20; // Decrease score -- Enemy despawned
+        GameMaster.CurrentScore -= 20; // Decrease score -- Enemy despawned
     }
 
     public void EndGame()
