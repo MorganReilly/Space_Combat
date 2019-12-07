@@ -57,6 +57,8 @@ MonoBehaviour:
     type: 3}
   spawnDelay: 2
   gameOverUI: {fileID: 0}
+  maxLives: 3
+  score: 0
 --- !u!114 &514281513855583942
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -72,15 +74,27 @@ MonoBehaviour:
   waves:
   - name: Few Bois
     enemy: {fileID: 7182241309795424014, guid: 49877c6e2786db823889237dfccbbbdd, type: 3}
-    count: 20
+    count: 5
     rate: 1
   - name: Good Few Bois
-    enemy: {fileID: 7182241309795424014, guid: 49877c6e2786db823889237dfccbbbdd, type: 3}
-    count: 30
+    enemy: {fileID: 5266723301570414920, guid: 37b3fb4f1ba6b0f5884f9f9972f4bda8, type: 3}
+    count: 5
     rate: 1.5
   - name: A Loada Bois
-    enemy: {fileID: 7182241309795424014, guid: 49877c6e2786db823889237dfccbbbdd, type: 3}
-    count: 40
+    enemy: {fileID: 2099797893677640434, guid: f657f3e40a5d7ed3199b558c335845a6, type: 3}
+    count: 5
+    rate: 2
+  - name: Some Cloudy Bois
+    enemy: {fileID: 1576436583842752444, guid: f56b32144a1cef351ae6a93ecfafc539, type: 3}
+    count: 5
+    rate: 2
+  - name: Some dark cloudy bois
+    enemy: {fileID: 4584940390305915644, guid: 15896ae415bd13516a70503044247a8c, type: 3}
+    count: 5
+    rate: 2
+  - name: Asteroidy bois
+    enemy: {fileID: 279067796816370400, guid: c206b6f2e59eba7c0868a6b34a976866, type: 3}
+    count: 5
     rate: 2
   spawnPoints:
   - {fileID: 2771888593736229784}

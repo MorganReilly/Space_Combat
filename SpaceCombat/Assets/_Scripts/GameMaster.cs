@@ -79,6 +79,7 @@ public class GameMaster : MonoBehaviour
     public static void KillEnemy(Enemy enemy)
     {
         Destroy(enemy.gameObject);
+        GameMaster.CurrentScore-=20; // Decrease score -- Enemy despawned
     }
 
     public void EndGame()

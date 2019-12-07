@@ -28,9 +28,9 @@ public class Bullet : MonoBehaviour
         if (enemy != null)
         {
             enemy.DamageEnemy(10);
-            GameMaster.CurrentScore+=10;
         }
 
         Destroy(gameObject);
+        GameMaster.CurrentScore += 10; // Increase score -- Enemy shot and killed
     }
 }
