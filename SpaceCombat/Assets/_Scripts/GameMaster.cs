@@ -25,6 +25,14 @@ public class GameMaster : MonoBehaviour
         get { return _remainingLives; }
     }
 
+    [SerializeField] private int score = 0;
+    private static int _currentScore = 0;
+    public static int CurrentScore
+    {
+        get { return _currentScore; }
+        set { _currentScore = value; }
+    }
+
     void Awake()
     {
         if (gm == null)

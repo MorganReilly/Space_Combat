@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -4765798487773210647}
   m_Layer: 11
   m_Name: E_Bullet
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -48,6 +48,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -102,7 +103,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!60 &1055118611484247120
 PolygonCollider2D:
@@ -151,4 +152,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: -20
   rb: {fileID: 2707783849374400335}
-  damage: 10
+  outOfBounds: -10

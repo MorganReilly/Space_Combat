@@ -50,7 +50,6 @@
      <Compile Include="Assets\_Scripts\Enemy.cs" />
      <Compile Include="Assets\_Scripts\EnemyBullet.cs" />
      <Compile Include="Assets\_Scripts\EnemyController.cs" />
-     <Compile Include="Assets\_Scripts\EnemySpawnerScript.cs" />
      <Compile Include="Assets\_Scripts\EnemyWeapon.cs" />
      <Compile Include="Assets\_Scripts\GameMaster.cs" />
      <Compile Include="Assets\_Scripts\GameOverUI.cs" />
@@ -58,6 +57,7 @@
      <Compile Include="Assets\_Scripts\MenuManager.cs" />
      <Compile Include="Assets\_Scripts\Player.cs" />
      <Compile Include="Assets\_Scripts\PlayerController.cs" />
+     <Compile Include="Assets\_Scripts\ScoreCounterUI.cs" />
      <Compile Include="Assets\_Scripts\StatusIndicator.cs" />
      <Compile Include="Assets\_Scripts\WaveSpawner.cs" />
      <Compile Include="Assets\_Scripts\WaveUI.cs" />

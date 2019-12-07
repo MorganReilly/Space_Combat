@@ -1,0 +1,4 @@
+#Fri Dec 06 19:16:00 GMT 2019
+base.0=/home/morgan/GMIT/modules/MAD3/Space_Combat/SpaceCombat/Temp/gradleOut/launcher/build/intermediates/transforms/dexMerger/release/0
+path.0=classes.dex
+renamed.0=classes.dex
