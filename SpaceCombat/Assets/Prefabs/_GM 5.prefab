@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1537732281997270759}
   - component: {fileID: 2081501440504181938}
   m_Layer: 0
-  m_Name: _GM
+  m_Name: _GM 5
   m_TagString: GM
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -74,26 +74,126 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waves:
-  - name: Wave1
+  - name: 1
     enemy: {fileID: 7182241309795424014, guid: 49877c6e2786db823889237dfccbbbdd, type: 3}
     count: 5
-    rate: 1
-  - name: Wave2
-    enemy: {fileID: 7182241309795424014, guid: 49877c6e2786db823889237dfccbbbdd, type: 3}
+    rate: 2
+  - name: 2
+    enemy: {fileID: 5266723301570414920, guid: 37b3fb4f1ba6b0f5884f9f9972f4bda8, type: 3}
     count: 10
-    rate: 1
-  - name: Wave3
+    rate: 2
+  - name: 3
     enemy: {fileID: 7182241309795424014, guid: 49877c6e2786db823889237dfccbbbdd, type: 3}
     count: 15
-    rate: 1
-  - name: Wave4
-    enemy: {fileID: 5266723301570414920, guid: 37b3fb4f1ba6b0f5884f9f9972f4bda8, type: 3}
-    count: 20
-    rate: 1
-  - name: Wave5
+    rate: 2
+  - name: 4
     enemy: {fileID: 7182241309795424014, guid: 49877c6e2786db823889237dfccbbbdd, type: 3}
+    count: 20
+    rate: 2
+  - name: 5
+    enemy: {fileID: 5266723301570414920, guid: 37b3fb4f1ba6b0f5884f9f9972f4bda8, type: 3}
     count: 25
-    rate: 1
+    rate: 2
+  - name: 6
+    enemy: {fileID: 7182241309795424014, guid: 49877c6e2786db823889237dfccbbbdd, type: 3}
+    count: 30
+    rate: 2
+  - name: 7
+    enemy: {fileID: 5266723301570414920, guid: 37b3fb4f1ba6b0f5884f9f9972f4bda8, type: 3}
+    count: 35
+    rate: 2
+  - name: 8
+    enemy: {fileID: 7182241309795424014, guid: 49877c6e2786db823889237dfccbbbdd, type: 3}
+    count: 40
+    rate: 2
+  - name: 9
+    enemy: {fileID: 5266723301570414920, guid: 37b3fb4f1ba6b0f5884f9f9972f4bda8, type: 3}
+    count: 45
+    rate: 2
+  - name: 10
+    enemy: {fileID: 2099797893677640434, guid: f657f3e40a5d7ed3199b558c335845a6, type: 3}
+    count: 50
+    rate: 2
+  - name: 11
+    enemy: {fileID: 2099797893677640434, guid: f657f3e40a5d7ed3199b558c335845a6, type: 3}
+    count: 55
+    rate: 2
+  - name: 12
+    enemy: {fileID: 7182241309795424014, guid: 49877c6e2786db823889237dfccbbbdd, type: 3}
+    count: 60
+    rate: 2
+  - name: 13
+    enemy: {fileID: 5266723301570414920, guid: 37b3fb4f1ba6b0f5884f9f9972f4bda8, type: 3}
+    count: 65
+    rate: 2
+  - name: 14
+    enemy: {fileID: 5266723301570414920, guid: 37b3fb4f1ba6b0f5884f9f9972f4bda8, type: 3}
+    count: 70
+    rate: 2
+  - name: 15
+    enemy: {fileID: 7182241309795424014, guid: 49877c6e2786db823889237dfccbbbdd, type: 3}
+    count: 75
+    rate: 2
+  - name: 16
+    enemy: {fileID: 7182241309795424014, guid: 49877c6e2786db823889237dfccbbbdd, type: 3}
+    count: 80
+    rate: 2
+  - name: 17
+    enemy: {fileID: 5266723301570414920, guid: 37b3fb4f1ba6b0f5884f9f9972f4bda8, type: 3}
+    count: 85
+    rate: 2
+  - name: 18
+    enemy: {fileID: 2099797893677640434, guid: f657f3e40a5d7ed3199b558c335845a6, type: 3}
+    count: 90
+    rate: 2
+  - name: 19
+    enemy: {fileID: 2099797893677640434, guid: f657f3e40a5d7ed3199b558c335845a6, type: 3}
+    count: 95
+    rate: 2
+  - name: 20
+    enemy: {fileID: 5266723301570414920, guid: 37b3fb4f1ba6b0f5884f9f9972f4bda8, type: 3}
+    count: 100
+    rate: 2
+  - name: 21
+    enemy: {fileID: 2099797893677640434, guid: f657f3e40a5d7ed3199b558c335845a6, type: 3}
+    count: 105
+    rate: 2
+  - name: 22
+    enemy: {fileID: 7182241309795424014, guid: 49877c6e2786db823889237dfccbbbdd, type: 3}
+    count: 110
+    rate: 2
+  - name: 23
+    enemy: {fileID: 5266723301570414920, guid: 37b3fb4f1ba6b0f5884f9f9972f4bda8, type: 3}
+    count: 115
+    rate: 2
+  - name: 24
+    enemy: {fileID: 2099797893677640434, guid: f657f3e40a5d7ed3199b558c335845a6, type: 3}
+    count: 120
+    rate: 2
+  - name: 25
+    enemy: {fileID: 7182241309795424014, guid: 49877c6e2786db823889237dfccbbbdd, type: 3}
+    count: 125
+    rate: 2
+  - name: 26
+    enemy: {fileID: 2099797893677640434, guid: f657f3e40a5d7ed3199b558c335845a6, type: 3}
+    count: 130
+    rate: 2
+  - name: 27
+    enemy: {fileID: 5266723301570414920, guid: 37b3fb4f1ba6b0f5884f9f9972f4bda8, type: 3}
+    count: 135
+    rate: 2
+  - name: 28
+    enemy: {fileID: 2099797893677640434, guid: f657f3e40a5d7ed3199b558c335845a6, type: 3}
+    count: 140
+    rate: 2
+  - name: 29
+    enemy: {fileID: 5266723301570414920, guid: 37b3fb4f1ba6b0f5884f9f9972f4bda8, type: 3}
+    count: 145
+    rate: 2
+  - name: 30
+    enemy: {fileID: 2099797893677640434, guid: f657f3e40a5d7ed3199b558c335845a6, type: 3}
+    count: 150
+    rate: 2
   spawnPoints:
   - {fileID: 2771888593736229784}
   - {fileID: 3855337050624360135}
@@ -109,12 +209,12 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 514281514031838818}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 464441e708698fa0c8bf92d2e2858422, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.686
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -208,9 +308,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 464441e708698fa0c8bf92d2e2858422, type: 3}
+  m_audioClip: {fileID: 8300000, guid: abd8acdaf177d562ebecf1fef6dd47de, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.686
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0

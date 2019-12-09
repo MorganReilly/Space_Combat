@@ -239,7 +239,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyStats:
     maxHealth: 200
-    damage: 40
+    damage: 60
   fallBoundary: -10
   statusIndicator: {fileID: 3221327125292437553}
   audioSource: {fileID: 4620914147145921699}

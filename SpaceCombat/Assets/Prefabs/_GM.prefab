@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 514281514031838820}
   - component: {fileID: 514281514031838821}
   - component: {fileID: 514281513855583942}
-  - component: {fileID: 1537732281997270759}
   - component: {fileID: 2081501440504181938}
+  - component: {fileID: 8111961279416730107}
   m_Layer: 0
   m_Name: _GM
   m_TagString: GM
@@ -87,7 +87,7 @@ MonoBehaviour:
     count: 15
     rate: 1
   - name: Wave4
-    enemy: {fileID: 5266723301570414920, guid: 37b3fb4f1ba6b0f5884f9f9972f4bda8, type: 3}
+    enemy: {fileID: 7182241309795424014, guid: 49877c6e2786db823889237dfccbbbdd, type: 3}
     count: 20
     rate: 1
   - name: Wave5
@@ -102,19 +102,19 @@ MonoBehaviour:
   - {fileID: 3855337050438584690}
   - {fileID: 3855337049693449631}
   timeBetweenWaves: 3
---- !u!82 &1537732281997270759
+--- !u!82 &2081501440504181938
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 514281514031838818}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 464441e708698fa0c8bf92d2e2858422, type: 3}
-  m_PlayOnAwake: 1
-  m_Volume: 0.686
+  m_PlayOnAwake: 0
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -198,7 +198,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!82 &2081501440504181938
+--- !u!82 &8111961279416730107
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -208,9 +208,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 464441e708698fa0c8bf92d2e2858422, type: 3}
+  m_audioClip: {fileID: 8300000, guid: abd8acdaf177d562ebecf1fef6dd47de, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.686
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0

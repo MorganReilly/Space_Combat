@@ -75,12 +75,44 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waves:
   - name: Wave1
-    enemy: {fileID: 2099797893677640434, guid: f657f3e40a5d7ed3199b558c335845a6, type: 3}
+    enemy: {fileID: 7182241309795424014, guid: 49877c6e2786db823889237dfccbbbdd, type: 3}
     count: 5
     rate: 1
   - name: Wave2
-    enemy: {fileID: 2099797893677640434, guid: f657f3e40a5d7ed3199b558c335845a6, type: 3}
+    enemy: {fileID: 7182241309795424014, guid: 49877c6e2786db823889237dfccbbbdd, type: 3}
     count: 10
+    rate: 1
+  - name: Wave3
+    enemy: {fileID: 7182241309795424014, guid: 49877c6e2786db823889237dfccbbbdd, type: 3}
+    count: 15
+    rate: 1
+  - name: Wave4
+    enemy: {fileID: 7182241309795424014, guid: 49877c6e2786db823889237dfccbbbdd, type: 3}
+    count: 20
+    rate: 1
+  - name: Wave5
+    enemy: {fileID: 7182241309795424014, guid: 49877c6e2786db823889237dfccbbbdd, type: 3}
+    count: 25
+    rate: 1
+  - name: Wave6
+    enemy: {fileID: 7182241309795424014, guid: 49877c6e2786db823889237dfccbbbdd, type: 3}
+    count: 30
+    rate: 1
+  - name: Wave7
+    enemy: {fileID: 7182241309795424014, guid: 49877c6e2786db823889237dfccbbbdd, type: 3}
+    count: 35
+    rate: 1
+  - name: Wave8
+    enemy: {fileID: 7182241309795424014, guid: 49877c6e2786db823889237dfccbbbdd, type: 3}
+    count: 35
+    rate: 1
+  - name: Wave9
+    enemy: {fileID: 2099797893677640434, guid: f657f3e40a5d7ed3199b558c335845a6, type: 3}
+    count: 40
+    rate: 1
+  - name: Wave10
+    enemy: {fileID: 7182241309795424014, guid: 49877c6e2786db823889237dfccbbbdd, type: 3}
+    count: 45
     rate: 1
   spawnPoints:
   - {fileID: 2771888593736229784}
@@ -97,12 +129,12 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 514281514031838818}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 464441e708698fa0c8bf92d2e2858422, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.686
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -196,9 +228,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 464441e708698fa0c8bf92d2e2858422, type: 3}
+  m_audioClip: {fileID: 8300000, guid: abd8acdaf177d562ebecf1fef6dd47de, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.686
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0
