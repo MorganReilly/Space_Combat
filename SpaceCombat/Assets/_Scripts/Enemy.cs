@@ -29,11 +29,13 @@ public class Enemy : MonoBehaviour
 
     public EnemyStats enemyStats = new EnemyStats();
 
-    [SerializeField] public int fallBoundary = -50;
+    [SerializeField] public int fallBoundary = -20;
 
     [Header("Optional: ")] // This tells unity to mark this as an optional field
     [SerializeField]
     private StatusIndicator statusIndicator;
+
+    public AudioSource audioSource;
 
     void Start()
     {
@@ -62,7 +64,9 @@ public class Enemy : MonoBehaviour
         if (enemyStats.curHealth <= 0)
         {
             // Die();
+            audioSource.Play();
             GameMaster.KillEnemy(this);
+            Debug.Log("Enemy Death by: Bullets");
         }
 
         // null check on statusIndicator
@@ -75,9 +79,12 @@ public class Enemy : MonoBehaviour
     void OnCollisionEnter2D(Collision2D _colInfo)
     {
         Player _player = _colInfo.collider.GetComponent<Player>();
-        if (_player != null){
+        if (_player != null)
+        {
             _player.DamagePlayer(enemyStats.damage);
+            audioSource.Play();
             GameMaster.KillEnemy(this);
+            Debug.Log("Enemy Death by: Collision");
         }
     }
 }

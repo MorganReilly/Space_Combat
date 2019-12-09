@@ -15,11 +15,8 @@ public class GameMaster : MonoBehaviour
     public Transform playerPrefab;
     public Transform spawnPoint;
     public int spawnDelay = 2;
-    public string spawnSoundName;
 
     [SerializeField] private GameObject gameOverUI;
-
-
     // Cache this
     private AudioManager audioManager;
 
@@ -48,22 +45,12 @@ public class GameMaster : MonoBehaviour
 
     void Start()
     {
-        audioManager.PlaySound(spawnSoundName);
         if (gm == null)
         {
             gm = GameObject.FindGameObjectWithTag("GM").GetComponent<GameMaster>();
         }
 
         _remainingLives = maxLives;
-
-        // Caching
-        audioManager = AudioManager.amInstance;
-
-        // Check if null
-        if (audioManager == null)
-        {
-            Debug.Log("No Audio Manager Found! ");
-        }
     }
 
     public IEnumerator RespawnPlayer()

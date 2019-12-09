@@ -159,7 +159,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 162218e88d7c7e6e291bdd4c21e9b436, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 0
 --- !u!114 &6226123856294172821
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -177,6 +177,7 @@ MonoBehaviour:
     damage: 40
   fallBoundary: -20
   statusIndicator: {fileID: 7323797493782929675}
+  audioSource: {fileID: 0}
 --- !u!1001 &1736572161
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -74,7 +74,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: c956d2a6b1963eb0e8bf8e5212eefd0b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -159,7 +159,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 162218e88d7c7e6e291bdd4c21e9b436, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 0
 --- !u!114 &2916938903439010280
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -177,6 +177,7 @@ MonoBehaviour:
     damage: 40
   fallBoundary: -20
   statusIndicator: {fileID: 7323797492454924456}
+  audioSource: {fileID: 0}
 --- !u!1001 &956185762
 PrefabInstance:
   m_ObjectHideFlags: 0

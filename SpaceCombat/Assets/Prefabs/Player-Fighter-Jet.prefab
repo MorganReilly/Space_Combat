@@ -199,7 +199,7 @@ MonoBehaviour:
   firePoint: {fileID: 7385116965567802362}
   bulletPrefab: {fileID: 4023284204514088987, guid: 3c3f5686e36b085c4b18c1a24a1dbcba,
     type: 3}
-  gunFire: {fileID: 1919042977}
+  audioSource: {fileID: 1919042977}
 --- !u!114 &7385116965724391217
 MonoBehaviour:
   m_ObjectHideFlags: 0

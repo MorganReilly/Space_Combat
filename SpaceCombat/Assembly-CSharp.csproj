@@ -54,6 +54,7 @@
      <Compile Include="Assets\_Scripts\EnemyWeapon.cs" />
      <Compile Include="Assets\_Scripts\GameMaster.cs" />
      <Compile Include="Assets\_Scripts\GameOverUI.cs" />
+     <Compile Include="Assets\_Scripts\LevelMenuManager.cs" />
      <Compile Include="Assets\_Scripts\LivesCounterUI.cs" />
      <Compile Include="Assets\_Scripts\MenuManager.cs" />
      <Compile Include="Assets\_Scripts\Player.cs" />
