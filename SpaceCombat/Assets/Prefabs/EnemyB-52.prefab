@@ -170,7 +170,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyStats:
-    maxHealth: 300
+    maxHealth: 150
     damage: 100
   fallBoundary: -10
   statusIndicator: {fileID: 8683116052478242834}
@@ -187,7 +187,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 162218e88d7c7e6e291bdd4c21e9b436, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 4
+  speed: 3
 --- !u!114 &2099797893677640436
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -195,13 +195,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2099797893677640443}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a928f3646fb63243794e89d990bba6c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   fireRate: 1
-  Damage: 10
+  Damage: 50
   toHit:
     serializedVersion: 2
     m_Bits: 2869
@@ -209,6 +209,7 @@ MonoBehaviour:
   firePoint: {fileID: 2099797894630178987}
   bulletPrefab: {fileID: 2804057942684359863, guid: 688fdd77c116c670292eac9f0cb6c377,
     type: 3}
+  startTimeBetweenShots: 1.5
 --- !u!82 &6596058815118020540
 AudioSource:
   m_ObjectHideFlags: 0
@@ -221,7 +222,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 464441e708698fa0c8bf92d2e2858422, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0

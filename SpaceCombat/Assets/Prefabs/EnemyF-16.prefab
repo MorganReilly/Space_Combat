@@ -224,7 +224,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 162218e88d7c7e6e291bdd4c21e9b436, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 4
 --- !u!114 &5266723301570414918
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -238,7 +238,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyStats:
-    maxHealth: 200
+    maxHealth: 100
     damage: 60
   fallBoundary: -10
   statusIndicator: {fileID: 3221327125292437553}
@@ -250,20 +250,21 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5266723301570414922}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a928f3646fb63243794e89d990bba6c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   fireRate: 1
-  Damage: 10
+  Damage: 30
   toHit:
     serializedVersion: 2
     m_Bits: 2867
-  timeToFire: 4
+  timeToFire: 1
   firePoint: {fileID: 5266723301158315283}
   bulletPrefab: {fileID: 5125655052391177116, guid: 9416c5131c0d039a599e138d5d0d43a5,
     type: 3}
+  startTimeBetweenShots: 1
 --- !u!82 &4620914147145921699
 AudioSource:
   m_ObjectHideFlags: 0

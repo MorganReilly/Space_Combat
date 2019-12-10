@@ -16,6 +16,9 @@ public class EnemyWeapon : MonoBehaviour
 
     public GameObject bulletPrefab;
 
+    private float timeBetweenShots;
+    public float startTimeBetweenShots;
+
     void Awake()
     {
         firePoint = transform.Find("FirePoint");
@@ -24,22 +27,32 @@ public class EnemyWeapon : MonoBehaviour
         {
             Debug.LogError("No FirePoint found! Sort it.");
         }
+        timeBetweenShots = startTimeBetweenShots;
     }
 
     // Update is called once per frame
     void Update()
     {
-        // Shoot(); // Debugging - Constant fire
-        // Check fire rate: single burst
-        if (fireRate == 0)
+        // // Shoot(); // Debugging - Constant fire
+        // // Check fire rate: single burst
+        // if (fireRate == 0)
+        // {
+        //     Shoot();
+        // }
+        // // Not single burst
+        // else
+        // {
+        //     timeToFire = Time.time + 1 / fireRate;
+        //     Shoot();
+        // }
+        if (timeBetweenShots <= 0)
         {
             Shoot();
+            timeBetweenShots = startTimeBetweenShots;
         }
-        // Not single burst
         else
         {
-            timeToFire = Time.time + 1 / fireRate;
-            Shoot();
+            timeBetweenShots -= Time.deltaTime;
         }
     }
 

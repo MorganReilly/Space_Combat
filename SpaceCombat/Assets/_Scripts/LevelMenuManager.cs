@@ -23,37 +23,43 @@ public class LevelMenuManager : MonoBehaviour
     public void PlayLevel_0()
     {
         Debug.Log("Level Selection == 1");
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene("Gameplay00");
     }
 
     public void PlayLevel_1()
     {
         Debug.Log("Level Selection == 2");
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
+        // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
+        SceneManager.LoadScene("Gameplay01");
     }
 
     public void PlayLevel_2()
     {
         Debug.Log("Level Selection == 3");
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 3);
+        // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 3);
+        SceneManager.LoadScene("Gameplay02");
     }
 
     public void PlayLevel_3()
     {
         Debug.Log("Level Selection == 4");
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 4);
+        // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 4);
+        SceneManager.LoadScene("Gameplay03");
     }
 
     public void PlayLevel_4()
     {
         Debug.Log("Level Selection == 5");
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 5);
+        // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 5);
+        SceneManager.LoadScene("Gameplay04");
     }
 
     public void PlayLevel_5()
     {
         Debug.Log("Level Selection == 6");
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 6);
+        // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 6);
+         SceneManager.LoadScene("Gameplay05");
     }
 
     public void GoBack()

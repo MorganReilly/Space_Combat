@@ -259,6 +259,11 @@ PrefabInstance:
       propertyPath: gameOverUI
       value: 
       objectReference: {fileID: 1343028461}
+    - target: {fileID: 2081501440504181938, guid: 3bc2ee30821b5299085eef760f92eb39,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3bc2ee30821b5299085eef760f92eb39, type: 3}
 --- !u!114 &444888031 stripped
@@ -553,6 +558,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1919042977, guid: 680c4c13a6b9679be92e5a673c61e0df, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7385116965724391219, guid: 680c4c13a6b9679be92e5a673c61e0df,
         type: 3}
       propertyPath: m_LocalPosition.x

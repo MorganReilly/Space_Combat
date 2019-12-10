@@ -24,7 +24,8 @@ public class MenuManager : MonoBehaviour
     {
         // Should load build index 1
         Debug.Log("Settings Clicked");
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene("SettingsMenu");
         Application.Quit();
     }
 
@@ -32,7 +33,8 @@ public class MenuManager : MonoBehaviour
     {
         // Should load build index 2
         Debug.Log("Level Selection");
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
+        // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
+        SceneManager.LoadScene("LevelMenu");
     }
 
     public void StartGame()
@@ -40,13 +42,15 @@ public class MenuManager : MonoBehaviour
         // Should load build index 3
         Debug.Log("Game Started");
         // Starting the game will just load level 1
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 3);
+        // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 3);
+        SceneManager.LoadScene("Gameplay00");
     }
 
     public void GoBack()
     {
         Debug.Log("Back Button Pressed");
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+        // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+        SceneManager.LoadScene("MainMenu");
     }
 
     public void QuitGame()
